@@ -1,0 +1,104 @@
+body {
+  background-color: antiquewhite;
+}
+.title{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.menu-nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;      
+   padding-top: 20px;
+   padding-bottom: 20px;           
+  width: 100%;
+  height: 80px;
+  background-color: #242424;
+  z-index: 200;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: rgb(230, 230, 230);
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.inicio{
+   background-color:black;
+   padding-top: 120px;
+   padding-bottom: 20px;
+}
+
+.formacion{
+   background-color:rgb(255, 255, 255);
+   color: black;
+   padding-top: 120px;
+   padding-bottom: 20px;
+}
+
+.formacion-a{
+   clear: both;
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+.conocimientos{
+   background-color:black;
+   padding-top: 120px;
+   padding-bottom: 20px;
+   
+}
+
+.proyectos{
+   background-color:rgb(255, 255, 255);
+   color: black;
+   padding-top: 120px;
+   padding-bottom: 20px;
+}
+
+.certificados{
+   background-color:black;
+   padding-top: 120px;
+   padding-bottom: 20px;
+
+}
+
+.certificados-a{
+   font-size: 1.5em; 
+    font-weight: bold; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    color: inherit;
+    text-decoration: none;
+    
+
+}
+
+img{
+   max-width: 30%;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   display: flex;
+}
+
+.elemento-web {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 1000px;
+    font-size: 1.5em; 
+}
+
+footer{
+    background-color: #242424;
+    padding-top: 20px;
+   padding-bottom: 20px;    
+}
