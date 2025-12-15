@@ -1,5 +1,5 @@
 import { Component, signal, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+declare var AOS: any;
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,12 @@ import * as AOS from 'aos';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('portafolio');
+  
   ngOnInit(): void {
+    
     AOS.init({
     });
   }
