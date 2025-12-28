@@ -78,7 +78,7 @@
       <li>Desarrollo Web</li>
       <li>Configuración de Switches y Routers</li>
     </section>
-    <div style="display: flex;">
+    <div class="git">
       <div class="elemento-web"> <img
           src="https://static.vecteezy.com/system/resources/previews/055/030/388/non_2x/capcut-circle-icon-logo-symbol-free-png.png">
         <p>CapCut</p>
@@ -105,27 +105,80 @@
   <div class="proyectos" id="proyectos">
     <h1 class="title">Proyectos</h1>
     <section class="container mt-20">
-      <div style="display: flex;">
-        <div class="elemento-web">
-          <h2>Proyecto Angular</h2>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1200px-Angular_gradient_logo.png">
-        </div>
-        <div class="elemento-web">
-          <h2>Proyecto Packet Tracer</h2>
-          <img src="https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png">
-        </div>
-        <div class="elemento-web">
-          <h2>Proyecto Spring Boot</h2>
-          <img
-            src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/spring-boot-logo-icon-hd.png">
+      <div class="interfaz-web">
+        <div class="git">
+          <div class="elemento-web">
+
+            <h2>Proyecto Angular</h2>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1200px-Angular_gradient_logo.png">
+
+            <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Proyecto Angular</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a href="https://tu-sitio-web.com" target="_blank" class="btn-href">Ver Git Hub</a>
+                  <a href="https://github.com/usuario/repo" target="_blank" class="btn-href outline">Ver Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
+              </div>
+            </div>
+          </div> <br />
+          
+          <div class="elemento-web">
+            <h2>Proyecto Spring Boot</h2>
+            <img
+              src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/spring-boot-logo-icon-hd.png">
+            <button class="btn btn-dark" (click)="toggleSpring()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarSpring" (click)="toggleSpring()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Proyecto Spring Boot</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a href="https://tu-sitio-web.com" target="_blank" class="btn-href">Ver Git Hub</a>
+                  <a href="https://github.com/usuario/repo" target="_blank" class="btn-href outline">Ver Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="toggleSpring()">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <div class="elemento-web">
+
+            <h2>Proyecto Python</h2>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
+
+            <button class="btn btn-dark" (click)="togglePython()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarPython" (click)="togglePython()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Proyecto Python</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a href="https://tu-sitio-web.com" target="_blank" class="btn-href">Ver Git Hub</a>
+                  <a href="https://github.com/usuario/repo" target="_blank" class="btn-href outline">Ver Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="togglePython()">Cancelar</button>
+              </div>
+            </div>
+          </div> <br />
         </div>
       </div>
     </section>
   </div>
   <div class="certificados" id="certificados">
     <h1 class="title">Certificados</h1>
-    <section style="display: flex;" class="container mt-20">
+    <section class="git">
       <div class="elemento-web">
         <a class="certificados-a"
           href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link">Certificado
