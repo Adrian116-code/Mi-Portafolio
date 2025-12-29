@@ -44,4 +44,9 @@ export class App {
   onResize() {
     this.isPc = window.innerWidth > 1024;
   }
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> 7a1ebc532677e430690e4d378491ce2f208e82d1
 }
