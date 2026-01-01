@@ -173,6 +173,7 @@ img{
    margin-top: 50px;
    margin-bottom: 50px;
    display: flex;
+   transition: 0.2s;
 }
 
 .elemento-web {
@@ -257,6 +258,8 @@ img{
 }
 
 .btn-href:hover { opacity: 0.8; transform: scale(1.02); }
+
+img:hover { opacity: 0.8; transform: scale(1.3); }
 
 @keyframes fadeIn {
   from { opacity: 0; }
