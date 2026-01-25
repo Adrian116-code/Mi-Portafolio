@@ -238,6 +238,10 @@ img{
   transition: 0,2s;
 }
 
+section{
+  padding-bottom: 50px;
+}
+
 .btn:hover{  opacity: 0.8; transform: scale(1.02); }
 
 .btn-href {
