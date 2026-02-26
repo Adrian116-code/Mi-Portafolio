@@ -32,7 +32,7 @@ Si deseas clonar este proyecto para verlo localmente:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone [https://github.com/Adrian116-code/Mi-Portafolio.git] (https://github.com/Adrian116-code/Mi-Portafolio.git))
+   git clone (https://github.com/Adrian116-code/Mi-Portafolio.git))
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
 
