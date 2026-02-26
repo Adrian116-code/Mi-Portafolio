@@ -1,5 +1,39 @@
 # Portafolio
 
+# 🌐 Mi Portafolio Profesional
+
+¡Hola! Soy Adrian de la Puente, estudiante de Ingeniería de Sistemas. Este repositorio contiene el código fuente de mi sitio web personal, diseñado para mostrar mis proyectos, habilidades y trayectoria técnica.
+
+> **🔗 Ver en vivo:** (https://adrian116-code.github.io/Mi-Portafolio/)
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+Para este proyecto utilicé un stack enfocado en el rendimiento y la tipación fuerte:
+
+* **TypeScript:** Implementado para garantizar un código robusto, escalable y libre de errores comunes de JavaScript mediante el uso de interfaces y tipos.
+* **HTML & CSS:** Estructura semántica y diseño responsivo utilizando técnicas modernas para asegurar que el portafolio se vea perfecto en móviles y escritorio.
+
+---
+
+## 🛠️ Características Principales
+
+- **Diseño Responsivo:** Adaptabilidad total a cualquier tamaño de pantalla.
+- **Navegación Fluida:** Experiencia de usuario (UX) optimizada para reclutadores.
+- **Sección de Proyectos Dinámica:** Conexión visual con mis trabajos más relevantes.
+- **Formulario de Contacto:** Integración directa para oportunidades laborales.
+
+---
+
+## 📦 Instalación y Uso Local
+
+Si deseas clonar este proyecto para verlo localmente:
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone [https://github.com/Adrian116-code/Mi-Portafolio.git] (https://github.com/Adrian116-code/Mi-Portafolio.git))
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
 
 ## Development server
