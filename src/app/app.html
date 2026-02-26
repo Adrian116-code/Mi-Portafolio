@@ -6,10 +6,10 @@
     <nav class="menu-nav">
       <strong>
         <a class="menu-item" href="#inicio">Inicio</a>
-        <a class="menu-item" href="#formacion">Formación</a>
-        <a class="menu-item" href="#conocimientos">Conocimientos</a>
         <a class="menu-item" href="#proyectos">Proyectos</a>
         <a class="menu-item" href="#certificados">Certificados</a>
+        <a class="menu-item" href="#formacion">Formación</a>
+        <a class="menu-item" href="#conocimientos">Conocimientos</a>
       </strong>
     </nav>
   </div>
@@ -24,9 +24,125 @@
         <p>Estudiante de octavo ciclo de Ingeniería de Sistemas en la Universidad Privada del
           Norte. Poseo un nivel de inglés avanzado certificado y conocimientos técnicos en Angular y edición de video.
           Me caracterizo por mi capacidad de resolución de problemas, comunicación asertiva y disponibilidad inmediata
-          para contribuir en proyectos tecnológicos.</p>
+          para contribuir en proyectos tecnológicos.</p><br>
+          <a href="https://www.linkedin.com/in/adrian-jes%C3%BAs-15246425b/"  target="_blank">Mi Linkedin</a>
       </div>
       <div> <img class="perfil" src="perfil.jpg"></div>
+    </section>
+
+  </div>
+  <div class="proyectos" id="proyectos">
+    <h1 class="title">Proyectos</h1>
+    <section class="container mt-20">
+      <div class="interfaz-web">
+        <div class="git">
+          <div class="elemento-web">
+
+            <h2>Proyecto E-commerce (Beta)</h2>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1200px-Angular_gradient_logo.png">
+
+            <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Angular + Supabase</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a href="https://proyecto-e-commerce-2026.pages.dev/" target="_blank" class="btn-href">Visitar
+                    Sitio</a>
+                  <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank"
+                    class="btn-href outline">Ver Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
+              </div>
+            </div>
+          </div> <br />
+
+          <div class="elemento-web">
+            <h2>Proyecto Spring Boot</h2>
+            <img
+              src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/spring-boot-logo-icon-hd.png">
+            <button class="btn btn-dark" (click)="toggleSpring()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarSpring" (click)="toggleSpring()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Proyecto Spring Boot</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a target="_blank" class="btn-href">Muy Pronto</a>
+                  <a href="https://github.com/Adrian116-code/SpringBoot" target="_blank" class="btn-href outline">Ver
+                    Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="toggleSpring()">Cancelar</button>
+              </div>
+            </div>
+          </div> <br />
+          <div class="elemento-web">
+
+            <h2>Proyecto Python</h2>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
+
+            <button class="btn btn-dark" (click)="togglePython()">Acceder al Proyecto</button>
+            <div class="overlay-login" *ngIf="MostrarPython" (click)="togglePython()">
+              <div class="login-card" (click)="$event.stopPropagation()">
+                <h3>Proyecto Python</h3>
+                <p>Selecciona una acción para continuar</p>
+
+                <div class="button-group">
+                  <a href="https://adrian116-code.github.io/Dashboard/" target="_blank" class="btn-href">Visitar
+                    Sitio</a>
+                  <a href="https://github.com/Adrian116-code/Dashboard.git" target="_blank" class="btn-href outline">Ver
+                    Código
+                    Source</a>
+                </div><br />
+
+                <button class="btn btn-secondary" (click)="togglePython()">Cancelar</button>
+              </div>
+            </div>
+          </div> <br />
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="certificados" id="certificados">
+    <h1 class="title">Certificados</h1>
+    <section class="git">
+      <div class="elemento-web">
+        <a class="certificados-a"
+          href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
+          target="_blank">Certificado
+          Linux</a>
+        <img src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
+      </div>
+      <div class="elemento-web">
+        <a class="certificados-a"
+          href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
+          target="_blank">Certificado
+          HTML</a>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png">
+      </div>
+      <div class="elemento-web">
+        <a class="certificados-a"
+          href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
+          target="_blank">Certificado
+          CSS</a><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png">
+      </div>
+      <div class="elemento-web">
+        <a class="certificados-a"
+          href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
+          target="_blank">Certificado
+          Icpna</a>
+        <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png">
+      </div>
+
     </section>
 
   </div>
@@ -116,122 +232,6 @@
         <p>Cisco</p>
       </div>
     </div>
-  </div>
-
-  <div class="proyectos" id="proyectos">
-    <h1 class="title">Proyectos</h1>
-    <section class="container mt-20">
-      <div class="interfaz-web">
-        <div class="git">
-          <div class="elemento-web">
-
-            <h2>Proyecto E-commerce (Beta)</h2>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1200px-Angular_gradient_logo.png">
-
-            <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>Angular + Supabase</h3>
-                <p>Selecciona una acción para continuar</p>
-
-                <div class="button-group">
-                  <a href="https://proyecto-e-commerce-2026.pages.dev/" target="_blank" class="btn-href">Visitar
-                    Sitio</a>
-                  <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank"
-                    class="btn-href outline">Ver Código
-                    Source</a>
-                </div><br />
-
-                <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
-              </div>
-            </div>
-          </div> <br />
-
-          <div class="elemento-web">
-            <h2>Proyecto Spring Boot</h2>
-            <img
-              src="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/spring-boot-logo-icon-hd.png">
-            <button class="btn btn-dark" (click)="toggleSpring()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarSpring" (click)="toggleSpring()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>Proyecto Spring Boot</h3>
-                <p>Selecciona una acción para continuar</p>
-
-                <div class="button-group">
-                  <a target="_blank" class="btn-href">Muy Pronto</a>
-                  <a href="https://github.com/Adrian116-code/SpringBoot" target="_blank"
-                    class="btn-href outline">Ver Código
-                    Source</a>
-                </div><br />
-
-                <button class="btn btn-secondary" (click)="toggleSpring()">Cancelar</button>
-              </div>
-            </div>
-          </div> <br />
-          <div class="elemento-web">
-
-            <h2>Proyecto Python</h2>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
-
-            <button class="btn btn-dark" (click)="togglePython()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarPython" (click)="togglePython()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>Proyecto Python</h3>
-                <p>Selecciona una acción para continuar</p>
-
-                <div class="button-group">
-                  <a href="https://adrian116-code.github.io/Dashboard/" target="_blank" class="btn-href">Visitar
-                    Sitio</a>
-                  <a href="https://github.com/Adrian116-code/Dashboard.git" target="_blank" class="btn-href outline">Ver
-                    Código
-                    Source</a>
-                </div><br />
-
-                <button class="btn btn-secondary" (click)="togglePython()">Cancelar</button>
-              </div>
-            </div>
-          </div> <br />
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="certificados" id="certificados">
-    <h1 class="title">Certificados</h1>
-    <section class="git">
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
-          target="_blank">Certificado
-          Linux</a>
-        <img src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
-          target="_blank">Certificado
-          HTML</a>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
-          target="_blank">Certificado
-          CSS</a><img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
-          target="_blank">Certificado
-          Icpna</a>
-        <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png">
-      </div>
-
-    </section>
-
   </div>
 
   <footer style="display: flex;">
