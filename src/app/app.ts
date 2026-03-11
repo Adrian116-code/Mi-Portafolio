@@ -22,7 +22,7 @@ export class App {
 
   MostrarAngular: boolean = false;
 
-  MostrarSpring: boolean = false;
+  MostrarSupabase: boolean = false;
 
   MostrarPython: boolean = false;
 
@@ -30,8 +30,8 @@ export class App {
     this.MostrarAngular = !this.MostrarAngular;
   }
 
-  toggleSpring(){
-    this.MostrarSpring = !this.MostrarSpring;
+  toggleSupabase(){
+    this.MostrarSupabase = !this.MostrarSupabase;
   }
 
   togglePython(){
