@@ -192,6 +192,70 @@ img{
   padding: 20px;
   text-align: center;
   display: flex;
+  flex-direction: column;
+}
+
+.carrusel-proyectos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  justify-content: center;
+}
+
+.carrusel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel-item {
+  flex: 0 0 auto;
+  width: 260px;
+}
+
+.carrusel-flecha {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #242424;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.carrusel-flecha:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carrusel-flecha {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .carrusel-item {
+    width: 200px;
+  }
+}
+
+.carrusel-item img:hover {
+  transform: none;
+  opacity: 1;
 }
 
 .overlay-login {

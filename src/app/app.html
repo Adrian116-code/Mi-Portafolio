@@ -34,80 +34,115 @@
   <div class="proyectos" id="proyectos">
     <h1 class="title">Proyectos</h1>
     <section class="container mt-20">
-      <div class="interfaz-web">
-        <div class="git">
-          <div class="elemento-web">
+      <div class="interfaz-web ">
+        <div class="container my-5">
+          <swiper-container slides-per-view="1" space-between="20" breakpoints='{
+      "768": {
+        "slidesPerView": 3,
+        "spaceBetween": 25
+      }
+    }' loop="true" navigation="true" pagination="true">
 
-            <h2>Portafolio Profesional Web</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png">
+            <swiper-slide>
+              <div class="elemento-web">
 
-            <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>Portafolio Profesional Web</h3>
-                <p>Selecciona una acción para continuar</p>
+                <h2>Portafolio Profesional Web</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png">
 
-                <div class="button-group">
-                  <a href="https://adrian116-code.github.io/Mi-Portafolio/" target="_blank" class="btn-href">Visitar
-                    Sitio</a>
-                  <a href="https://github.com/Adrian116-code/Mi-Portafolio" target="_blank" class="btn-href outline">Ver
-                    Código
-                    Source</a>
-                </div><br />
+                <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
+                <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
+                  <div class="login-card" (click)="$event.stopPropagation()">
+                    <h3>Portafolio Profesional Web</h3>
+                    <p>Selecciona una acción para continuar</p>
 
-                <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
-              </div>
-            </div>
+                    <div class="button-group">
+                      <a href="https://github.com/Adrian116-code/Mi-Portafolio" target="_blank" class="btn-href">Ver
+                        Código
+                        Source</a>
+                    </div><br />
+
+                    <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
+                  </div>
+                </div>
 
 
-          </div> <br />
+              </div> <br />
+            </swiper-slide>
 
-          <div class="elemento-web">
-            <h2>E-commerce Supabase</h2>
-            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp">
-            <button class="btn btn-dark" (click)="toggleSupabase()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarSupabase" (click)="toggleSupabase()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>E-commerce Supabase</h3>
-                <p>Selecciona una acción para continuar</p>
+            <swiper-slide>
+              <div class="elemento-web">
+                <h2>E-commerce Supabase</h2>
+                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp">
+                <button class="btn btn-dark" (click)="toggleSupabase()">Acceder al Proyecto</button>
+                <div class="overlay-login" *ngIf="MostrarSupabase" (click)="toggleSupabase()">
+                  <div class="login-card" (click)="$event.stopPropagation()">
+                    <h3>E-commerce Supabase</h3>
+                    <p>Selecciona una acción para continuar</p>
 
-                <div class="button-group">
-                  <a target="_blank" href="https://proyecto-e-commerce-2026.pages.dev/" class="btn-href">Visitar
-                    Sitio</a>
-                  <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank"
-                    class="btn-href outline">Ver
-                    Código
-                    Source</a>
-                </div><br />
+                    <div class="button-group">
+                      <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank"
+                        class="btn-href">Ver
+                        Código
+                        Source</a>
+                    </div><br />
 
-                <button class="btn btn-secondary" (click)="toggleSupabase()">Cancelar</button>
-              </div>
-            </div>
-          </div> <br />
-          <div class="elemento-web">
+                    <button class="btn btn-secondary" (click)="toggleSupabase()">Cancelar</button>
+                  </div>
+                </div>
+              </div> <br />
+            </swiper-slide>
 
-            <h2>Proyecto Python</h2>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/250px-Python-logo-notext.svg.png">
+            <swiper-slide>
+              <div class="elemento-web">
 
-            <button class="btn btn-dark" (click)="togglePython()">Acceder al Proyecto</button>
-            <div class="overlay-login" *ngIf="MostrarPython" (click)="togglePython()">
-              <div class="login-card" (click)="$event.stopPropagation()">
-                <h3>Proyecto Python</h3>
-                <p>Selecciona una acción para continuar</p>
+                <h2>Proyecto Unity</h2>
+                <img src="https://images.seeklogo.com/logo-png/27/2/unity-logo-png_seeklogo-274050.png">
 
-                <div class="button-group">
-                  <a href="https://adrian116-code.github.io/Dashboard/" target="_blank" class="btn-href">Visitar
-                    Sitio</a>
-                  <a href="https://github.com/Adrian116-code/Dashboard.git" target="_blank" class="btn-href outline">Ver
-                    Código
-                    Source</a>
-                </div><br />
+                <button class="btn btn-dark" (click)="toggleUnity()">Acceder al Proyecto</button>
+                <div class="overlay-login" *ngIf="MostrarUnity" (click)="toggleUnity()">
+                  <div class="login-card" (click)="$event.stopPropagation()">
+                    <h3>Proyecto Unity</h3>
+                    <p>Selecciona una acción para continuar</p>
 
-                <button class="btn btn-secondary" (click)="togglePython()">Cancelar</button>
-              </div>
-            </div>
-          </div> <br/>
+                    <div class="button-group">
+                      <a href="https://github.com/Adrian116-code/Retrojump" target="_blank" class="btn-href">Ver
+                        Código
+                        Source</a>
+                    </div><br />
+
+                    <button class="btn btn-secondary" (click)="toggleUnity()">Cancelar</button>
+                  </div>
+                </div>
+              </div> <br />
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="elemento-web">
+
+                <h2>Proyecto Android</h2>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/3840px-Android_Studio_Logo_%282023%29.svg.png">
+
+                <button class="btn btn-dark" (click)="toggleAndroid()">Acceder al Proyecto</button>
+                <div class="overlay-login" *ngIf="MostrarAndroid" (click)="toggleAndroid()">
+                  <div class="login-card" (click)="$event.stopPropagation()">
+                    <h3>Proyecto Android</h3>
+                    <p>Selecciona una acción para continuar</p>
+
+                    <div class="button-group">
+                      <a href="https://github.com/Adrian116-code/Alcamen-Proyecto-Final" target="_blank"
+                        class="btn-href">Ver
+                        Código
+                        Source</a>
+                    </div><br />
+
+                    <button class="btn btn-secondary" (click)="toggleAndroid()">Cancelar</button>
+                  </div>
+                </div>
+              </div> <br />
+            </swiper-slide>
+
+          </swiper-container>
         </div>
       </div>
     </section>
@@ -115,36 +150,57 @@
   <div class="certificados" id="certificados">
     <h1 class="title">Certificados</h1>
     <section class="git">
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
-          target="_blank">Certificado
-          Linux</a>
-        <img src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
-          target="_blank">Certificado
-          HTML</a>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
-          target="_blank">Certificado
-          CSS</a><img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png">
-      </div>
-      <div class="elemento-web">
-        <a class="certificados-a"
-          href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
-          target="_blank">Certificado
-          Icpna</a>
-        <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png">
-      </div>
+      <div class="container my-5">
+        <swiper-container slides-per-view="1" space-between="20" breakpoints='{
+      "768": {
+        "slidesPerView": 3,
+        "spaceBetween": 25
+      }
+    }' loop="true" navigation="true" pagination="true">
 
+          <swiper-slide>
+            <div class="elemento-web">
+              <a class="certificados-a"
+                href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
+                target="_blank">Certificado
+                Linux</a>
+              <img
+                src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="elemento-web">
+              <a class="certificados-a"
+                href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
+                target="_blank">Certificado
+                HTML</a>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png">
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="elemento-web">
+              <a class="certificados-a"
+                href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
+                target="_blank">Certificado
+                CSS</a><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png">
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="elemento-web">
+              <a class="certificados-a"
+                href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
+                target="_blank">Certificado
+                Icpna</a>
+              <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png">
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
     </section>
 
   </div>
@@ -156,7 +212,7 @@
           <h2 class="formacion-a">Ingeniería de Sistemas</h2> <br />
           <p class="formacion-a">2022 - 2026</p>
           <p class="formacion-a">Universidad Privada del Norte</p>
-          <p class="formacion-a">8vo Ciclo </p>
+          <p class="formacion-a">10mo Ciclo </p>
         </div> <br />
 
         <div>
@@ -221,28 +277,54 @@
       <li>Edición de video (Capcut)</li>
       <li>Proyectos base con Angular</li>
     </section>
-    <div class="git">
-      <div class="elemento-web"> <img
-          src="https://static.vecteezy.com/system/resources/previews/055/030/388/non_2x/capcut-circle-icon-logo-symbol-free-png.png">
-        <p>CapCut</p>
+    <section>
+      <div class="git">
+        <div class="container my-5">
+          <swiper-container slides-per-view="1" space-between="20" breakpoints='{
+      "768": {
+        "slidesPerView": 3,
+        "spaceBetween": 25
+      }
+    }' loop="true" navigation="true" pagination="true">
+
+            <swiper-slide>
+              <div class="elemento-web"> <img
+                  src="https://static.vecteezy.com/system/resources/previews/055/030/388/non_2x/capcut-circle-icon-logo-symbol-free-png.png">
+                <p>CapCut</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="elemento-web"> <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/960px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png">
+                <p>Microsoft Word</p>
+              </div>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="elemento-web"> <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                <p>Photoshop</p>
+              </div>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="elemento-web"> <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png">
+                <p>Visual Studio Code</p>
+              </div>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="elemento-web"> <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png">
+                <p>Cisco</p>
+              </div>
+            </swiper-slide>
+
+          </swiper-container>
+        </div>
       </div>
-      <div class="elemento-web"> <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/960px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png">
-        <p>Microsoft Word</p>
-      </div>
-      <div class="elemento-web"> <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
-        <p>Photoshop</p>
-      </div>
-      <div class="elemento-web"> <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png">
-        <p>Visual Studio Code</p>
-      </div>
-      <div class="elemento-web"> <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png">
-        <p>Cisco</p>
-      </div>
-    </div>
+    </section>
   </div>
 
   <footer style="display: flex;">
