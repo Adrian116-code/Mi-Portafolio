@@ -1,351 +1,368 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<div>
-  <div>
-    <nav class="menu-nav">
-      <strong>
-        <a class="menu-item" href="#inicio">Inicio</a>
-        <a class="menu-item" href="#proyectos">Proyectos</a>
-        <a class="menu-item" href="#certificados">Certificados</a>
-        <a class="menu-item" href="#formacion">Formación</a>
-        <a class="menu-item" href="#conocimientos">Conocimientos</a>
-      </strong>
-    </nav>
-  </div>
+<header>
+  <nav>
+    <div class="logo">Mi Portafolio</div>
 
-  <div class="inicio" id="inicio">
-    <h1 class="title">
-      Mi Portafolio
-    </h1> <br />
-    <section class="container mt-20" style="display: flex;">
-      <div class="elemento-web">
-        <h1 style="margin-top: 80px;" class="container mt-50">Adrian de la Puente Huamaní</h1> <br>
-        <p>Estudiante de octavo ciclo de Ingeniería de Sistemas en la Universidad Privada del Norte con enfoque en
-          Desarrollo Frontend. Poseo un nivel de inglés avanzado certificado. Me caracterizo por mi capacidad de
-          resolución de problemas, comunicación asertiva y disponibilidad inmediata para contribuir en proyectos
-          tecnológicos. </p><br>
-        <a href="https://www.linkedin.com/in/adrian-jes%C3%BAs-de-la-puente-15246425b/" target="_blank">Mi Linkedin</a>
-      </div>
-    </section>
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú" (click)="toggleMenu()">
+      <i class="fas" [class.fa-bars]="!menuAbierto" [class.fa-times]="menuAbierto"></i>
+    </button>
 
-  </div>
-  <div class="proyectos" id="proyectos">
-    <h1 class="title">Proyectos</h1>
-    <section class="container mt-20">
-      <div class="interfaz-web ">
-        <div class="container my-5">
-          <swiper-container slides-per-view="1" space-between="20" breakpoints='{
-      "768": {
-        "slidesPerView": 3,
-        "spaceBetween": 25
-      }
-    }' loop="true" navigation="true" pagination="true">
-
-            <swiper-slide>
-              <div class="elemento-web">
-
-                <h2>Portafolio Profesional Web</h2>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png">
-
-                <button class="btn btn-dark" (click)="toggleAngular()">Acceder al Proyecto</button>
-                <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
-                  <div class="login-card" (click)="$event.stopPropagation()">
-                    <h3>Portafolio Profesional Web</h3>
-                    <p>Selecciona una acción para continuar</p>
-
-                    <div class="button-group">
-                      <a href="https://github.com/Adrian116-code/Mi-Portafolio" target="_blank" class="btn-href">Ver
-                        Código
-                        Source</a>
-                    </div><br />
-
-                    <button class="btn btn-secondary" (click)="toggleAngular()">Cancelar</button>
-                  </div>
-                </div>
-
-
-              </div> <br />
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="elemento-web">
-                <h2>E-commerce Supabase</h2>
-                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp">
-                <button class="btn btn-dark" (click)="toggleSupabase()">Acceder al Proyecto</button>
-                <div class="overlay-login" *ngIf="MostrarSupabase" (click)="toggleSupabase()">
-                  <div class="login-card" (click)="$event.stopPropagation()">
-                    <h3>E-commerce Supabase</h3>
-                    <p>Selecciona una acción para continuar</p>
-
-                    <div class="button-group">
-                      <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank"
-                        class="btn-href">Ver
-                        Código
-                        Source</a>
-                    </div><br />
-
-                    <button class="btn btn-secondary" (click)="toggleSupabase()">Cancelar</button>
-                  </div>
-                </div>
-              </div> <br />
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="elemento-web">
-
-                <h2>Proyecto Unity</h2>
-                <img src="https://images.seeklogo.com/logo-png/27/2/unity-logo-png_seeklogo-274050.png">
-
-                <button class="btn btn-dark" (click)="toggleUnity()">Acceder al Proyecto</button>
-                <div class="overlay-login" *ngIf="MostrarUnity" (click)="toggleUnity()">
-                  <div class="login-card" (click)="$event.stopPropagation()">
-                    <h3>Proyecto Unity</h3>
-                    <p>Selecciona una acción para continuar</p>
-
-                    <div class="button-group">
-                      <a href="https://github.com/Adrian116-code/Retrojump" target="_blank" class="btn-href">Ver
-                        Código
-                        Source</a>
-                    </div><br />
-
-                    <button class="btn btn-secondary" (click)="toggleUnity()">Cancelar</button>
-                  </div>
-                </div>
-              </div> <br />
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="elemento-web">
-
-                <h2>Proyecto Android</h2>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/3840px-Android_Studio_Logo_%282023%29.svg.png">
-
-                <button class="btn btn-dark" (click)="toggleAndroid()">Acceder al Proyecto</button>
-                <div class="overlay-login" *ngIf="MostrarAndroid" (click)="toggleAndroid()">
-                  <div class="login-card" (click)="$event.stopPropagation()">
-                    <h3>Proyecto Android</h3>
-                    <p>Selecciona una acción para continuar</p>
-
-                    <div class="button-group">
-                      <a href="https://github.com/Adrian116-code/Alcamen-Proyecto-Final" target="_blank"
-                        class="btn-href">Ver
-                        Código
-                        Source</a>
-                    </div><br />
-
-                    <button class="btn btn-secondary" (click)="toggleAndroid()">Cancelar</button>
-                  </div>
-                </div>
-              </div> <br />
-            </swiper-slide>
-
-          </swiper-container>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="certificados" id="certificados">
-    <h1 class="title">Certificados</h1>
-    <section class="git">
-      <div class="container my-5">
-        <swiper-container slides-per-view="1" space-between="20" breakpoints='{
-      "768": {
-        "slidesPerView": 3,
-        "spaceBetween": 25
-      }
-    }' loop="true" navigation="true" pagination="true">
-
-          <swiper-slide>
-            <div class="elemento-web">
-              <a class="certificados-a"
-                href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
-                target="_blank">Certificado
-                Linux</a>
-              <img
-                src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
-            </div>
-          </swiper-slide>
-
-          <swiper-slide>
-            <div class="elemento-web">
-              <a class="certificados-a"
-                href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
-                target="_blank">Certificado
-                HTML</a>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png">
-            </div>
-          </swiper-slide>
-
-          <swiper-slide>
-            <div class="elemento-web">
-              <a class="certificados-a"
-                href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
-                target="_blank">Certificado
-                CSS</a><img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png">
-            </div>
-          </swiper-slide>
-
-          <swiper-slide>
-            <div class="elemento-web">
-              <a class="certificados-a"
-                href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
-                target="_blank">Certificado
-                Icpna</a>
-              <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png">
-            </div>
-          </swiper-slide>
-        </swiper-container>
-      </div>
-    </section>
-
-  </div>
-  <div class="formacion" id="formacion">
-    <h1 class="title">Formación</h1>
-    <div style="display: flex;">
-      <section class="container mt-20" style="flex-direction: column;">
-        <div class="spotify-card">
-          <div class="card-header">
-            <h2 style="max-width: 350px;">Ingeniería de Sistemas</h2>
-            <span class="date">2022 - 2026</span>
-          </div><br />
-          <p class="formacion-a">Universidad Privada del Norte</p>
-          <p class="formacion-a">10mo Ciclo </p>
-        </div> <br />
-        <div class="spotify-card">
-           <div class="card-header">
-            <h2 style="max-width: 350px;">Inglés Avanzado</h2>
-            <span class="date">2020 - 2023</span>
-          </div><br />
-          <p class="formacion-a">I.C.P.N.A</p>
-          <p class="formacion-a">Nivel: Avanzado Completo</p>
-        </div> <br />
-        <div class="spotify-card">
-           <div class="card-header">
-            <h2 style="max-width: 350px;">Secundaria</h2>
-            <span class="date">2017 - 2021</span>
-          </div><br />
-          <p class="formacion-a">I.E.P.G.P General Emilio Soyer Cabero</p>
-          <p class="formacion-a">Primeros Puestos 2017</p>
-        </div> <br />
-      </section>
+    <!-- Enlaces de navegación -->
+    <div class="nav-links" [class.active]="menuAbierto">
+      <a class="menu-item" href="#inicio" (click)="toggleMenu()">Inicio</a>
+      <a href="#proyectos" (click)="toggleMenu()">Proyectos</a>
+      <a href="#experiencia"(click)="toggleMenu()">Experiencia</a>
+      <a href="#certificados" (click)="toggleMenu()">Certificados</a>
+      <a href="#formacion" (click)="toggleMenu()">Formación</a>
+      <a href="#conocimientos" (click)="toggleMenu()">Conocimientos</a>
     </div>
-    <h1 class="title">Experiencia Laboral</h1>
-    <section class="container mt-20" style="flex-direction: column;">
-      <div>
-        <div class="spotify-card">
-          <div class="card-header">
-            <h2>Protecta Perú</h2>
-            <span class="date">Marzo 2026 - Julio 2026</span>
-          </div><br />
-          <p class="formacion-a">Practicante de Sistemas</p><br />
-          <p class="formacion-a">Estructuré y automaticé matrices de control en Excel mediante el uso de fórmulas
-            avanzadas y validación de
-            datos, optimizando la generación de reportes operativos. </p><br />
+  </nav>
+</header>
 
-          <p class="formacion-a">Diseñé esquemas de codificación técnica para activos e inventarios, garantizando la
-            trazabilidad y
-            consistencia de los registros..</p>
-        </div> <br />
-      </div>
-      
-      <div>
-        <div class="spotify-card">
-          <div class="card-header">
-            <h2 style="max-width: 350px;">Atención al Cliente y Gestión de Oficina</h2>
-            <span class="date">Enero 2024 - Marzo 2024</span>
-          </div><br />
-          <p class="formacion-a">Negocio Familiar</p> <br/>
-          <p class="formacion-a">Implementación de herramientas de ofimática para el control administrativo y mejora de
-            procesos de atención.</p> <br/>
-          <p class="formacion-a">Incrementé el volumen de ventas mediante una atención personalizada y eficiente.</p>
-        </div> <br />
-      </div>
-      <div>
-        <div class="spotify-card">
-          <div class="card-header">
-            <h2 style="max-width: 350px;">Asistente de Marketing Digital y Edición</h2>
-            <span class="date">Enero 2023 - Marzo 2023</span>
-          </div><br />
-          <p class="formacion-a">Kefas Arquitectos</p> <br/>
-          <p class="formacion-a">Optimización de activos digitales y gestión de contenido visual estratégico.</p> <br/>
-          <p class="formacion-a">Optimicé la visualización de las propiedades, mejorando la presentación digital de la
-            cartera de la empresa.</p>
-        </div> <br />
-      </div>
-    </section>
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <span class="badge">Estudiante de Ingeniería de Sistemas</span>
+    <h1>Adrian De la Puente Huamaní</h1>
+    <p>
+      Enfocado en la <strong>Gestión e Infraestructura de TI</strong>, la optimización de sistemas y la administración
+      de bases de datos. Combino experiencia en gestión con base técnica en <strong>Angular y Supabase</strong> para
+      la entrega de soluciones tecnológicas eficientes.
+    </p>
+    <div class="cta-buttons">
+      <a href="https://www.linkedin.com/in/adrian-jes%C3%BAs-de-la-puente-15246425b/" target="_blank"
+        class="btn btn-secondary">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
   </div>
-  <div class="conocimientos" id="conocimientos">
+</section>
 
+<!-- Sección de Proyectos -->
+<section id="proyectos">
+  <h2 class="section-title">Proyectos</h2>
 
-    <section class="container mt-20">
-      <h1 class="title">Conocimientos</h1>
-      <h2>Habilidades</h2>
-      <li>Puntualidad y compromiso</li>
-      <li>Comunicación asertiva</li>
-      <li>Gestión de activos</li>
-      <li>Resolución de problemas</li>
-      <li>Disponibilidad inmediata</li> <br />
-      <h2>Herramientos </h2>
-      <li>Manejo de Office (Word/Excel)</li>
-      <li>Edición de video (Capcut)</li>
-      <li>Proyectos base con Angular</li>
-    </section>
-    <section>
-      <div class="git">
-        <div class="container my-5">
-          <swiper-container slides-per-view="1" space-between="20" breakpoints='{
-      "768": {
-        "slidesPerView": 3,
-        "spaceBetween": 25
-      }
-    }' loop="true" navigation="true" pagination="true">
+  <div class="slider-wrapper">
 
-            <swiper-slide>
-              <div class="elemento-web"> <img
-                  src="https://static.vecteezy.com/system/resources/previews/055/030/388/non_2x/capcut-circle-icon-logo-symbol-free-png.png">
-                <p>CapCut</p>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="elemento-web"> <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/960px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png">
-                <p>Microsoft Word</p>
-              </div>
-            </swiper-slide>
+    <swiper-container slides-per-view="1" space-between="20" breakpoints='{
+        "768": {
+          "slidesPerView": 3,
+          "spaceBetween": 25
+        }
+      }' loop="true" navigation="true" pagination="true">
 
-            <swiper-slide>
-              <div class="elemento-web"> <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
-                <p>Photoshop</p>
-              </div>
-            </swiper-slide>
+      <!-- Angular -->
+      <swiper-slide>
+        <div class="carousel-card">
 
-            <swiper-slide>
-              <div class="elemento-web"> <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png">
-                <p>Visual Studio Code</p>
-              </div>
-            </swiper-slide>
+          <h3>Portafolio Profesional Web</h3>
 
-            <swiper-slide>
-              <div class="elemento-web"> <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png">
-                <p>Cisco</p>
-              </div>
-            </swiper-slide>
+          <div class="carousel-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png" alt="Angular Logo">
+          </div>
 
-          </swiper-container>
+          <button class="btn-access" (click)="toggleAngular()">
+            Acceder al Proyecto
+          </button>
+
         </div>
-      </div>
-    </section>
+      </swiper-slide>
+
+      <!-- Supabase -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>E-commerce Supabase</h3>
+          <div class="carousel-icon">
+            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp" alt="Supabase Logo">
+          </div>
+          <button class="btn-access" (click)="toggleSupabase()">
+            Acceder al Proyecto
+          </button>
+        </div>
+      </swiper-slide>
+
+      <!-- Unity -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Proyecto Unity</h3>
+          <div class="carousel-icon">
+            <img src="https://images.seeklogo.com/logo-png/27/2/unity-logo-png_seeklogo-274050.png" alt="Unity Logo">
+          </div>
+          <button class="btn-access" (click)="toggleUnity()">
+            Acceder al Proyecto
+          </button>
+        </div>
+      </swiper-slide>
+
+      <!-- Android -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Proyecto Android</h3>
+          <div class="carousel-icon">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/3840px-Android_Studio_Logo_%282023%29.svg.png"
+              alt="Android Studio Logo">
+          </div>
+          <button class="btn-access" (click)="toggleAndroid()">
+            Acceder al Proyecto
+          </button>
+        </div>
+      </swiper-slide>
+
+    </swiper-container>
+
   </div>
 
-  <footer style="display: flex;">
+  <!-- Modal Angular -->
+  <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
+    <div class="login-card" (click)="$event.stopPropagation()">
+      <h3>Portafolio Profesional Web</h3>
+      <p>Selecciona una acción para continuar</p>
+      <div class="button-group">
+        <a href="https://github.com/Adrian116-code/Mi-Portafolio" target="_blank" class="btn-href">
+          Ver Código Source
+        </a>
+      </div>
+
+      <button class="btn btn-secondary" (click)="toggleAngular()">
+        Cancelar
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- Modal Supabase -->
+  <div class="overlay-login" *ngIf="MostrarSupabase" (click)="toggleSupabase()">
+
+    <div class="login-card" (click)="$event.stopPropagation()">
+      <h3>E-commerce Supabase</h3>
+      <p>Selecciona una acción para continuar</p>
+      <div class="button-group">
+        <a href="https://github.com/Adrian116-code/proyecto-e-commerce-2026" target="_blank" class="btn-href">
+          Ver Código Source
+        </a>
+      </div>
+      <button class="btn btn-secondary" (click)="toggleSupabase()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Unity -->
+  <div class="overlay-login" *ngIf="MostrarUnity" (click)="toggleUnity()">
+    <div class="login-card" (click)="$event.stopPropagation()">
+      <h3>Proyecto Unity</h3>
+      <p>Selecciona una acción para continuar</p>
+      <div class="button-group">
+        <a href="https://github.com/Adrian116-code/Retrojump" target="_blank" class="btn-href">
+          Ver Código Source
+        </a>
+      </div>
+      <button class="btn btn-secondary" (click)="toggleUnity()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Modal Android -->
+  <div class="overlay-login" *ngIf="MostrarAndroid" (click)="toggleAndroid()">
+    <div class="login-card" (click)="$event.stopPropagation()">
+      <h3>Proyecto Android</h3>
+      <p>Selecciona una acción para continuar</p>
+      <div class="button-group">
+        <a href="https://github.com/Adrian116-code/Alcamen-Proyecto-Final" target="_blank" class="btn-href">
+          Ver Código Source
+        </a>
+      </div>
+      <button class="btn btn-secondary" (click)="toggleAndroid()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <h2 class="section-title">Experiencia</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Practicante de Sistemas</h3>
+        <span class="date">Mar. 2026 - Jul. 2026</span>
+      </div>
+      <div class="sub">Protecta Perú</div>
+      <p class="detail">
+        Automatización de matrices de control en Excel y elaboración
+        de esquemas de codificación técnica para activos e inventarios.
+      </p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Atención al Cliente y Gestión de Oficina</h3>
+        <span class="date">Ene. 2024 - Mar. 2024</span>
+      </div>
+      <div class="sub">Negocio Familiar</div>
+      <p class="detail">
+        Digitalización del control de inventario y registro de ventas
+        mediante herramientas de ofimática.
+      </p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Asistente de Marketing Digital y Edición</h3>
+        <span class="date">Ene. 2023 - Mar. 2023</span>
+      </div>
+      <div class="sub">KefasArquitectos</div>
+      <p class="detail">
+        Gestión y actualización del catálogo digital de propiedades
+        y mejora de la presentación visual del portafolio web.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Certificados -->
+<section id="certificados">
+  <h2 class="section-title">Certificados</h2>
+  <div class="slider-wrapper">
+    <swiper-container slides-per-view="1" space-between="20" breakpoints='{
+          "768": {
+            "slidesPerView": 3,
+            "spaceBetween": 25
+          }
+        }' loop="true" navigation="true" pagination="true">
+
+      <!-- Certificado Linux -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Certificado Linux</h3>
+          <div class="carousel-icon">
+            <img src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg"
+              alt="Linux Logo">
+          </div>
+          <a href="https://drive.google.com/file/d/1y9DltKE-pp6-JLNUsktV__2KbfFvu-XM/view?usp=drive_link"
+            target="_blank" class="btn-access">
+            Ver Certificado
+          </a>
+        </div>
+      </swiper-slide>
+
+      <!-- Certificado HTML -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Certificado HTML</h3>
+          <div class="carousel-icon">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png"
+              alt="HTML5 Logo">
+          </div>
+          <a href="https://drive.google.com/file/d/1VlgCwPq1cwJDmkWBw_-9pfhpDclSwNzk/view?usp=drive_link"
+            target="_blank" class="btn-access">
+            Ver Certificado
+          </a>
+        </div>
+      </swiper-slide>
+
+      <!-- Certificado CSS -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Certificado CSS</h3>
+          <div class="carousel-icon">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png"
+              alt="CSS3 Logo">
+          </div>
+          <a href="https://drive.google.com/file/d/1MZGGsc9Sb9gMC6zApOBppYNaeBtvGWML/view?usp=drive_link"
+            target="_blank" class="btn-access">
+            Ver Certificado
+          </a>
+        </div>
+      </swiper-slide>
+
+      <!-- Certificado ICPNA -->
+      <swiper-slide>
+        <div class="carousel-card">
+          <h3>Certificado ICPNA</h3>
+          <div class="carousel-icon">
+            <img src="https://iepalfrednobel.edu.pe/wp-content/uploads/2022/11/logo-icpna.png" alt="ICPNA Logo">
+          </div>
+          <a href="https://drive.google.com/file/d/1MH-VrN4y7uXoA3h_B467wz_cWYtIB7uZ/view?usp=drive_link"
+            target="_blank" class="btn-access">
+            Ver Certificado
+          </a>
+        </div>
+      </swiper-slide>
+
+    </swiper-container>
+  </div>
+</section>
+
+<!-- Sección de Formación Académica Integrada -->
+<section id="formacion">
+  <h2 class="section-title">Formación Académica</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Ingeniería de Sistemas</h3>
+        <span class="date">2022 - 2026</span>
+      </div>
+      <div class="sub">Universidad Privada del Norte (UPN)</div>
+      <p class="detail">10mo Ciclo</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Inglés Avanzado</h3>
+        <span class="date">2020 - 2023</span>
+      </div>
+      <div class="sub">I.C.P.N.A</div>
+      <p class="detail">Nivel: Avanzado Completo</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>Educación Secundaria</h3>
+        <span class="date">2017 - 2021</span>
+      </div>
+      <div class="sub">I.E.P.G.P General Emilio Soyer Cabero</div>
+      <p class="detail">Primeros Puestos 2017</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="conocimientos">
+  <h2 class="section-title">Conocimientos Técnicos</h2>
+
+  <!-- Grid de Habilidades Principales -->
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fab fa-angular"></i>
+      <h3>Frontend</h3>
+      <p>Angular, TypeScript, HTML5, CSS3, JavaScript</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-database"></i>
+      <h3>Backend & BD</h3>
+      <p>Supabase, MySQL, Firebase</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-code-branch"></i>
+      <h3>Herramientas & Deploy</h3>
+      <p>Git, GitHub Pages, Cloudflare Pages, VS Code</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Móvil & Otros</h3>
+      <p>Android Studio, Unity</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
     <p style="font-size: 1em; " class="elemento-web">981 549 150</p>
     <p style="font-size: 10m;" class="elemento-web">Chorrillos, Lima, Perú</p>
     <p style="font-size: 1em; " class="elemento-web">delapuenteadrian3@gmail.com</p>
-  </footer>
+</footer>

@@ -1,8 +1,6 @@
-import { Component, signal, OnInit, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, signal, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HostListener } from '@angular/core';
-import { register } from 'swiper/element/bundle';
-register();
+
 declare var AOS: any;
 
 @Component({
@@ -58,5 +56,10 @@ export class App {
   @HostListener('window:resize')
   onResize() {
     this.isPc = window.innerWidth > 1024;
+  }
+  menuAbierto: boolean = false;
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
   }
 }
