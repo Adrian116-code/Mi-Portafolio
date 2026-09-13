@@ -2,12 +2,10 @@
   <nav>
     <div class="logo">Mi Portafolio</div>
 
-    <!-- Botón hamburguesa -->
     <button class="menu-toggle" aria-label="Abrir menú" (click)="toggleMenu()">
       <i class="fas" [class.fa-bars]="!menuAbierto" [class.fa-times]="menuAbierto"></i>
     </button>
 
-    <!-- Enlaces de navegación -->
     <div class="nav-links" [class.active]="menuAbierto">
       <a class="menu-item" href="#inicio" (click)="toggleMenu()">Inicio</a>
       <a href="#proyectos" (click)="toggleMenu()">Proyectos</a>
@@ -37,12 +35,10 @@
   </div>
 </section>
 
-<!-- Sección de Proyectos -->
 <section id="proyectos">
   <h2 class="section-title">Proyectos</h2>
 
   <div class="slider-wrapper">
-
     <swiper-container slides-per-view="1" space-between="20" breakpoints='{
         "768": {
           "slidesPerView": 3,
@@ -50,7 +46,6 @@
         }
       }' loop="true" navigation="true" pagination="true">
 
-      <!-- Angular -->
       <swiper-slide>
         <div class="carousel-card">
 
@@ -67,7 +62,6 @@
         </div>
       </swiper-slide>
 
-      <!-- Supabase -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>E-commerce Supabase</h3>
@@ -80,7 +74,6 @@
         </div>
       </swiper-slide>
 
-      <!-- Unity -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>Proyecto Unity</h3>
@@ -93,7 +86,6 @@
         </div>
       </swiper-slide>
 
-      <!-- Android -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>Proyecto Android</h3>
@@ -112,7 +104,6 @@
 
   </div>
 
-  <!-- Modal Angular -->
   <div class="overlay-login" *ngIf="MostrarAngular" (click)="toggleAngular()">
     <div class="login-card" (click)="$event.stopPropagation()">
       <h3>Portafolio Profesional Web</h3>
@@ -126,12 +117,9 @@
       <button class="btn btn-secondary" (click)="toggleAngular()">
         Cancelar
       </button>
-
     </div>
   </div>
 
-
-  <!-- Modal Supabase -->
   <div class="overlay-login" *ngIf="MostrarSupabase" (click)="toggleSupabase()">
 
     <div class="login-card" (click)="$event.stopPropagation()">
@@ -148,7 +136,6 @@
     </div>
   </div>
 
-  <!-- Modal Unity -->
   <div class="overlay-login" *ngIf="MostrarUnity" (click)="toggleUnity()">
     <div class="login-card" (click)="$event.stopPropagation()">
       <h3>Proyecto Unity</h3>
@@ -164,8 +151,6 @@
     </div>
   </div>
 
-
-  <!-- Modal Android -->
   <div class="overlay-login" *ngIf="MostrarAndroid" (click)="toggleAndroid()">
     <div class="login-card" (click)="$event.stopPropagation()">
       <h3>Proyecto Android</h3>
@@ -221,7 +206,6 @@
   </div>
 </section>
 
-<!-- Sección de Certificados -->
 <section id="certificados">
   <h2 class="section-title">Certificados</h2>
   <div class="slider-wrapper">
@@ -232,7 +216,6 @@
           }
         }' loop="true" navigation="true" pagination="true">
 
-      <!-- Certificado Linux -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>Certificado Linux</h3>
@@ -247,7 +230,6 @@
         </div>
       </swiper-slide>
 
-      <!-- Certificado HTML -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>Certificado HTML</h3>
@@ -279,7 +261,6 @@
         </div>
       </swiper-slide>
 
-      <!-- Certificado ICPNA -->
       <swiper-slide>
         <div class="carousel-card">
           <h3>Certificado ICPNA</h3>
@@ -297,7 +278,6 @@
   </div>
 </section>
 
-<!-- Sección de Formación Académica Integrada -->
 <section id="formacion">
   <h2 class="section-title">Formación Académica</h2>
   <div class="timeline">
@@ -335,7 +315,6 @@
 <section id="conocimientos">
   <h2 class="section-title">Conocimientos Técnicos</h2>
 
-  <!-- Grid de Habilidades Principales -->
   <div class="skills-grid">
     <div class="skill-card">
       <i class="fab fa-angular"></i>
