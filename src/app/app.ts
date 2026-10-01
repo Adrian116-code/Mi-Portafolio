@@ -1,8 +1,6 @@
 import { Component, signal, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-declare var AOS: any;
-
 @Component({
   selector: 'app-root',
   imports: [CommonModule],
@@ -13,13 +11,6 @@ declare var AOS: any;
 
 export class App {
   protected readonly title = signal('portafolio');
-
-  ngOnInit(): void {
-
-    AOS.init({
-    });
-    this.isPc = window.innerWidth > 768;
-  }
 
   MostrarAngular: boolean = false;
 
